@@ -8,8 +8,18 @@
 </head>
 <body>
     <div class="container">
-        
+
     </div>
-    
+    <script>
+        fetch("https://myapp.com/api/users/list?apikey=12345678")
+    .then(response => response.json()) 
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error("Error fetching data:", error); 
+    });
+
+    </script>
 </body>
 </html>
